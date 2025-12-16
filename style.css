@@ -204,12 +204,13 @@ body {
 
 .projects-img {
     height: 180px;
+    width: 180px;
     background: linear-gradient(135deg, #1E293B, #0F172A);
 }
 
 .projects-links {
     padding: 0 20px 20px;
-    display: flex;
+    display: block;
     gap: 15px;
 }
 
