@@ -54,11 +54,40 @@
     <section id="skills" class="skills">
         <h2>Skills</h2>
 
-        <div class="skils-grid">
-            <div class="skills">HTML</div>
-            <div class="skills">CSS</div>
-            <div class="skills">JavaScript</div>
-            <div class="skills">React</div>
+       <div class="skills-grid">
+
+  <div class="skill">
+    <span>HTML</span>
+    <div class="progress">
+      <div class="progress-bar" data-progress="85"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span>CSS</span>
+    <div class="progress">
+      <div class="progress-bar" data-progress="30"></div>
+    </div>
+  </div>
+
+</div>
+
+            <div class="skill">
+    <span>JavaScript</span>
+    <div class="progress">
+      <div class="progress-bar" data-progress="5"></div>
+    </div>
+  </div>
+
+</div>
+            <div class="skill">
+    <span>React</span>
+    <div class="progress">
+      <div class="progress-bar" data-progress="0"></div>
+    </div>
+  </div>
+
+</div>
         </div>
     </section>
 
@@ -89,5 +118,21 @@
             <a href="https://twitter.com/KitmoraStodio">Twitter</a>
         </div>
     </section>
+
+    <script>
+  document.querySelectorAll(".skill").forEach(skill => {
+    skill.addEventListener("click", () => {
+      const bar = skill.querySelector(".progress-bar");
+      const value = bar.dataset.progress;
+
+      skill.classList.toggle("active");
+      bar.style.width = skill.classList.contains("active")
+        ? value + "%"
+        : "0";
+    });
+  });
+</script>
+
+
 </body>
 </html>

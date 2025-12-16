@@ -137,13 +137,42 @@ body {
     gap: 20px;
 }
 
-.skills {
-    background: #111827;
-    padding: 30px;
-    text-align: center;
-    border-radius: 16px;
-    font-weight: 600;
-    transition: all 0.3s;
+.skill {
+  background: #111827;
+  padding: 30px;
+  text-align: center;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.progress {
+  height: 10px;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+
+  transform: scaleX(0);
+  opacity: 0;
+  transform-origin: left;
+  transition: all 0.4s ease;
+}
+
+.skill.active .progress {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #3b82f6, #60A5FA);
+  transition: width 0.6s ease;
 }
 
 .skills:hover {
